@@ -17,7 +17,7 @@ ALGO_DIR		=	$(SRC_DIR)algo/push.c \
 						$(SRC_DIR)algo/sort_three.c \
 						$(SRC_DIR)algo/swap.c
 
-PUSH_SWAP_DIR		=	$(SRC_DIR)push_swap/handle_errors.c \
+PUSH_SWAP_DIR		=	$(SRC_DIR)push_swap/errors.c \
 						$(SRC_DIR)push_swap/init_a_to_b.c \
 						$(SRC_DIR)push_swap/init_b_to_a.c \
 						$(SRC_DIR)push_swap/push_swap.c \
