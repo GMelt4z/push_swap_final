@@ -6,7 +6,7 @@
 /*   By: gbriand <gbriand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 17:08:57 by gbriand           #+#    #+#             */
-/*   Updated: 2024/12/11 17:28:29 by gbriand          ###   ########.fr       */
+/*   Updated: 2024/12/12 11:19:04 by gbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,20 @@ char	**split(char *s, char c)
 	}
 	result_array[i] = NULL;
 	return (result_array);
+}
+
+void	free_split_result(char **result_array)
+{
+	int	i;
+
+	i = 0;
+	if (result_array)
+	{
+		while (result_array[i] != NULL)
+		{
+			free(result_array[i]);
+			++i;
+		}
+		free(result_array);
+	}
 }

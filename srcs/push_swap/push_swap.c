@@ -6,7 +6,7 @@
 /*   By: gbriand <gbriand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 17:00:49 by gbriand           #+#    #+#             */
-/*   Updated: 2024/12/11 17:09:02 by gbriand          ###   ########.fr       */
+/*   Updated: 2024/12/12 11:19:26 by gbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ int	main(int argc, char **argv)
 			sort_stacks(&a, &b);
 	}
 	free_stack(&a);
+	free_split_result(argv);
 	return (0);
 }

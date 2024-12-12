@@ -6,7 +6,7 @@
 /*   By: gbriand <gbriand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 17:09:09 by gbriand           #+#    #+#             */
-/*   Updated: 2024/12/11 19:34:33 by gbriand          ###   ########.fr       */
+/*   Updated: 2024/12/12 11:14:16 by gbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,4 @@ void	free_errors(t_stack_node **a)
 {
 	free_stack(a);
 	ft_printf("Error\n");
-	exit(1);
 }

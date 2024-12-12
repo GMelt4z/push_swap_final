@@ -6,7 +6,7 @@
 /*   By: gbriand <gbriand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 17:10:12 by gbriand           #+#    #+#             */
-/*   Updated: 2024/12/11 18:20:43 by gbriand          ###   ########.fr       */
+/*   Updated: 2024/12/12 11:09:56 by gbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void			free_errors(t_stack_node **a);
 
 void			init_stack_a(t_stack_node **a, char **argv);
 char			**split(char *s, char c);
+void			free_split_result(char **result_array);
 
 void			init_nodes_a(t_stack_node *a, t_stack_node *b);
 void			init_nodes_b(t_stack_node *a, t_stack_node *b);
