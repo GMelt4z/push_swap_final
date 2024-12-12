@@ -1,12 +1,12 @@
 NAME				= push_swap
 
 LIBFT				= ./libft/libft.a
-INC					= inc/
+INC					= -I inc/
 SRC_DIR				= srcs/
 OBJ_DIR				= obj/
 
-CC					= gcc
-CFLAGS				= -Wall -Werror -Wextra -I
+CC					= cc
+CFLAGS				= -Wall -Werror -Wextra -I -g3
 RM					= rm -f
 
 ALGO_DIR		=	$(SRC_DIR)algo/push.c \
@@ -29,7 +29,7 @@ SRCS 				= $(ALGO_DIR) $(PUSH_SWAP_DIR)
 
 OBJ 				= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRCS))
 
-start:				
+start:
 					@make all
 
 $(LIBFT):
@@ -38,11 +38,11 @@ $(LIBFT):
 all: 				$(NAME)
 
 $(NAME): 			$(OBJ) $(LIBFT)
-					@$(CC) $(CFLAGS) $(INC) $(OBJ) $(LIBFT) -o $(NAME)
+					@$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME)
 
-$(OBJ_DIR)%.o:		$(SRC_DIR)%.c 
+$(OBJ_DIR)%.o:		$(SRC_DIR)%.c
 					@mkdir -p $(@D)
-					@$(CC) $(CFLAGS) $(INC) -c $< -o $@
+					@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 					@$(RM) -r $(OBJ_DIR)

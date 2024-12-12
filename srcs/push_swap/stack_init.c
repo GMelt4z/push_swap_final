@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbriand <gbriand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 17:08:54 by gbriand           #+#    #+#             */
-/*   Updated: 2024/12/11 17:17:38 by gbriand          ###   ########.fr       */
+/*   Created: 2024/12/12 16:17:49 by gbriand           #+#    #+#             */
+/*   Updated: 2024/12/12 16:18:21 by gbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,12 +68,21 @@ void	init_stack_a(t_stack_node **a, char **argv)
 	while (argv[i])
 	{
 		if (error_syntax(argv[i]))
+		{
 			free_errors(a);
+			break ;
+		}
 		n = ft_atol(argv[i]);
 		if (n > INT_MAX || n < INT_MIN)
+		{
 			free_errors(a);
+			break ;
+		}
 		if (error_duplicate(*a, (int)n))
+		{
 			free_errors(a);
+			break ;
+		}
 		append_node(a, (int)n);
 		i++;
 	}
@@ -111,6 +120,6 @@ void	prep_for_push(t_stack_node **stack,
 				rb(stack, false);
 			else
 				rrb(stack, false);
-		}	
+		}
 	}
 }

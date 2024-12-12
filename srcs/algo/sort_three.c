@@ -6,7 +6,7 @@
 /*   By: gbriand <gbriand@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 17:09:33 by gbriand           #+#    #+#             */
-/*   Updated: 2024/12/11 17:25:45 by gbriand          ###   ########.fr       */
+/*   Updated: 2024/12/12 16:46:19 by gbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,9 @@ void	sort_three(t_stack_node **a)
 	if ((*a)->nbr > (*a)->next->nbr)
 		sa(a, false);
 }
+/*
+	if (stack_len(a) == 2)
+	{
+		sa(&a, false);
+		return ;
+	}*/
